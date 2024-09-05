@@ -3,7 +3,7 @@ const Header = () =>{
     return(
     <header className="bg-white shadow-md">
         <div className="container mx-auto px-4 py-3 flex items-center justify-between">
-          <img src="/api/placeholder/150/50" alt="TechTalk Central Logo" className="h-8" />
+          <img src="/telktalks-final3.png" alt="TechTalk Central Logo" className="h-16" />
           <div className="flex-grow mx-8 hidden md:block">
             <input
               type="text"
