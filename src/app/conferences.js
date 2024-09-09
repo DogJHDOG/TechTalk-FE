@@ -61,7 +61,7 @@ const Conferences = () => {
       >
         Recent Tech Conferences
       </motion.h2>
-      <div className="relative overflow-hidden">
+      <div className="relative p-4 pb-8 overflow-hidden">
         <motion.div 
           className="flex"
           animate={controls}
@@ -96,7 +96,7 @@ const Conferences = () => {
         </motion.div>
       </div>
       <motion.div 
-        className="text-center mt-16"
+        className="text-center mt-4"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.5 }}
