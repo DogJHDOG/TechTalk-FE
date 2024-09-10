@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button";
 const ConferenceInfo = ({selectedSession,handleVideoEnd,showReviews,setShowReviews}) =>{
     return(
         <div>
-
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}

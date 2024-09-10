@@ -54,12 +54,12 @@ const DebateCard = ({ title, description, votes, emoji }) => {
 
 export default function DeveloperDebates() {
   const debates = [
-    {
-      title: "Tabs vs Spaces",
-      description: "The age-old debate continues. Which do you prefer for indentation?",
-      votes: { for: 120, against: 80 },
-      emoji: "🔣"
-    },
+    // {
+    //   title: "Tabs vs Spaces",
+    //   description: "The age-old debate continues. Which do you prefer for indentation?",
+    //   votes: { for: 120, against: 80 },
+    //   emoji: "🔣"
+    // },
     {
       title: "Monolith vs Microservices",
       description: "Which architecture is better for scaling applications?",
@@ -81,9 +81,9 @@ export default function DeveloperDebates() {
   ]
 
   return (
-    <section className="bg-gray-100 p-8 rounded-xl">
-      <h2 className="text-4xl font-bold mb-8 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">Hot Dev Debates 🔥</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <section className="bg-gray-100 rounded-xl">
+      <div className="text-4xl font-bold mb-8 text-left bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">Hot Dev Debates 🔥</div>
+      <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
         {debates.map((debate, index) => (
           <DebateCard key={index} {...debate} />
         ))}

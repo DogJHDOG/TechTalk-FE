@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, useAnimationControls } from 'framer-motion';
 import ConferenceDashboard from './coferenceInteractive';
+import { MilestoneIcon } from 'lucide-react';
 
 const Conferences = () => {
   const [isPaused, setIsPaused] = useState(false);
@@ -53,14 +54,15 @@ const Conferences = () => {
   const renderinit = () =>{
     return(
       <div className="container mx-auto px-4">
-      <motion.h2 
-        className="text-gray-800 text-4xl font-bold text-center mb-16"
+      {/* <motion.h4
+        className="text-gray-800 text-4xl font-bold text-left"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
         Recent Tech Conferences
-      </motion.h2>
+      </motion.h4> */}
+      <MilestoneIcon/>
       <div className="relative p-4 pb-8 overflow-hidden">
         <motion.div 
           className="flex"
@@ -95,7 +97,7 @@ const Conferences = () => {
           ))}
         </motion.div>
       </div>
-      <motion.div 
+      {/* <motion.div 
         className="text-center mt-4"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -104,12 +106,12 @@ const Conferences = () => {
         <button className="bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-blue-700 transition-colors duration-300 shadow-lg hover:shadow-xl">
           View All Conferences
         </button>
-      </motion.div>
+      </motion.div> */}
     </div>
     )
   }
   return (
-    <section className="py-32 bg-gradient-to-b from-gray-100 to-white overflow-hidden">
+    <section className="py-6 bg-gradient-to-b from-gray-100 to-white overflow-hidden">
       {selectedConference ? 
       <ConferenceDashboard onClose={handleCloseDashboard}/>
       : renderinit()}

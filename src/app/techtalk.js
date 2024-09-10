@@ -1,8 +1,8 @@
 import React from 'react';
-import Header from './header';
-import Conferences from './conferences';
+import Header from './components/header';
+import Conferences from './components/conferences';
 import Intro from './hero';
-import FeatureSummaries from './FeatureSummaries';
+import FeatureSummaries from './components/FeatureSummaries';
 import Trending from './Trending';
 
 const TechTalkCentral = () => {
