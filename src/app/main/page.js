@@ -6,7 +6,7 @@ import DeveloperDebates from '../components/DeveloperDebates';
 import Header from '../components/header';
 import Slogan from '../components/main/Slogan';
 import UpcomingConferences from '../components/main/UpcomingConferences';
-
+    
 const DeveloperInsightsDashboard = () => (
   <div className="min-h-screen bg-gray-100">
     <Header />
