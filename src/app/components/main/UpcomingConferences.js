@@ -4,13 +4,14 @@ import { CalendarCheck, Users } from 'lucide-react';
 import React from 'react';
 
 const ConferenceCard = ({ name, date, attendees }) => (
-    <div className="bg-white p-4 rounded-lg shadow flex items-top">
-      <CalendarCheck className="mr-4 text-purple-600" />
-      <div>
+    <div className="bg-white rounded-lg shadow flex items-top overflow-hidden">
+      <CalendarCheck className="mt-4 ml-4 text-purple-600" />
+      <div className='py-4 pl-2'>
         <h4 className="font-bold text-black">{name}</h4>
         <p className="text-sm text-gray-600">{date}</p>
         <p className="text-sm text-gray-600">{attendees} attendees</p>
       </div>
+      <img src='/toss-slash24.jpg' className='items-right w-1/2'></img>
     </div>
   );
   
