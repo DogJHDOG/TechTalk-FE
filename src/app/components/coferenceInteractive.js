@@ -12,7 +12,7 @@ const ConferenceDashboard = ({ onClose }) => {
   const [showSessions, setShowSessions] = useState(false);
   const containerRef = useRef(null);
   const [showReviews, setShowReviews] = useState(false);
-
+  
   const conferences = [
     {
       year: "2022",
