@@ -12,10 +12,10 @@ const Header = () =>{
             />
           </div>
           <nav className="flex items-center space-x-4">
-            <a href="#" className="text-gray-600 hover:text-blue-600 transition">Home</a>
+            <a href="main" className="text-gray-600 hover:text-blue-600 transition">Home</a>
             <a href="#" className="text-gray-600 hover:text-blue-600 transition">Conferences</a>
-            <a href="#" className="text-gray-600 hover:text-blue-600 transition">Trends</a>
-            <a href="#" className="text-gray-600 hover:text-blue-600 transition">Community</a>
+            <a href="trends" className="text-gray-600 hover:text-blue-600 transition">Trends</a>
+            <a href="community" className="text-gray-600 hover:text-blue-600 transition">Community</a>
             <button className="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition">Sign In</button>
           </nav>
         </div>
