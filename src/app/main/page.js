@@ -9,7 +9,6 @@ import UpcomingConferences from '../components/main/UpcomingConferences';
     
 const DeveloperInsightsDashboard = () => (
   <div className="min-h-screen bg-gray-100">
-    <Header />
     <main className="container grid gap-6 mx-auto pb-10 py-2 px-4">
     <Conferences/>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
