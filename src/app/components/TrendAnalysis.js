@@ -30,14 +30,14 @@ const TrendAnalysis = () => (
     <Card className="col-span-1 md:col-span-2">
       <CardHeader>
         <CardTitle className="text-2xl font-bold flex items-center">
-          <TrendingUp className="mr-2" /> 기술 트렌드 분석
+          <TrendingUp className="mr-2" /> Tech Trends Analysis
         </CardTitle>
       </CardHeader>
       <CardContent>
-        <p className="text-gray-600 mb-4">주요 기술 트렌드의 시장 규모 및 성장률 분석</p>
+        <p className="text-gray-600 mb-4">Market size and growth rate analysis of major technology trends</p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <h4 className="text-lg font-semibold mb-2">지역별 시장 규모 (십억 달러)</h4>
+            <h4 className="text-lg font-semibold mb-2">Market Size by Region (Billion Dollars)</h4>
             <ResponsiveContainer width="100%" height={200}>
               <BarChart data={marketSizeData}>
                 <XAxis dataKey="region" />
@@ -48,7 +48,7 @@ const TrendAnalysis = () => (
             </ResponsiveContainer>
           </div>
           <div>
-            <h4 className="text-lg font-semibold mb-2">기술별 성장률 (%)</h4>
+            <h4 className="text-lg font-semibold mb-2">Growth Rate by Technology (%)</h4>
             <ResponsiveContainer width="100%" height={200}>
               <BarChart data={growthData} layout="vertical">
                 <XAxis type="number" />
@@ -65,7 +65,7 @@ const TrendAnalysis = () => (
     <Card>
       <CardHeader>
         <CardTitle className="text-xl font-bold flex items-center">
-          <Building className="mr-2" /> 업계 리더 기술 도입 사례
+          <Building className="mr-2" /> Industry Leader Technology Adoption Cases
         </CardTitle>
       </CardHeader>
       <CardContent>
@@ -83,11 +83,11 @@ const TrendAnalysis = () => (
 
     <Card className="bg-gradient-to-br from-blue-500 to-purple-600 text-white">
       <CardHeader>
-        <CardTitle className="text-xl font-bold">주간 트렌드 하이라이트</CardTitle>
+        <CardTitle className="text-xl font-bold">Weekly Trend Highlights</CardTitle>
       </CardHeader>
       <CardContent>
         <div className="text-4xl font-bold">49<span className="text-2xl">hrs</span></div>
-        <p className="text-sm mt-2">이번 주 평균 코딩 시간</p>
+        <p className="text-sm mt-2">Average coding time this week</p>
         <div className="mt-4 flex items-center">
           <span className="text-green-300 font-bold">+22%</span>
           <div className="ml-2 w-24 h-8 bg-white bg-opacity-20 rounded-full overflow-hidden">
