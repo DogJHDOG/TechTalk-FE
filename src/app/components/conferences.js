@@ -51,24 +51,39 @@ const Conferences = () => {
     setSelectedConference(null);
   };
 
-  const renderinit = () =>{
-    return(
+  const renderinit = () => {
+    return (
       <div className="container mx-auto px-4">
         <div className="flex flex-row items-center gap-5 m-3">
           <MilestoneIcon/>
-          <p className="text-2xl font-bold"> Recent Tech Conferences</p>
+          <p className="text-2xl font-medium"> Recent Tech Conferences</p>
         </div>
-        <div className="relative p-4 pb-8 overflow-hidden">
+        {/* div1 */}
+        <div 
+          className="relative p-4 pb-8 overflow-hidden"
+          style={{
+          }}
+        >
+          {/* Left shadow */}
+          <div 
+           className="absolute top-0 left-0 h-full w-32 pointer-events-none"
+            style={{
+              background: 'linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0))',
+              zIndex: 1,
+            }}
+          ></div>
+          {/* motion div */}
           <motion.div 
             className="flex"
             animate={controls}
           >
             {doubledConferences.map((conf, index) => (
+              // card
               <motion.div 
                 key={`${conf.name}-${index}`}
                 className="w-full md:w-1/4 flex-shrink-0 px-4"
                 whileHover={{ scale: 1.05 }}
-                onClick={()=>handleLearnMore(conf)}
+                onClick={() => handleLearnMore(conf)}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
@@ -83,28 +98,24 @@ const Conferences = () => {
                     <h3 className="text-gray-800 text-xl font-semibold mb-2">{conf.name}</h3>
                     <p className="text-gray-600 mb-2">{conf.date}</p>
                     <p className="text-gray-600 mb-4">{conf.location}</p>
-                    <a href="#" className="inline-block bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition-colors duration-300">
-                      Learn More
-                    </a>
                   </div>
                 </div>
               </motion.div>
             ))}
           </motion.div>
+          {/* Right shadow */}
+          <div 
+           className="absolute top-0 right-0 h-full w-32 pointer-events-none"
+           style={{
+              background: 'linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0))',
+              zIndex: 1,
+            }}
+          ></div>
         </div>
-      {/* <motion.div 
-        className="text-center mt-4"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.5 }}
-      >
-        <button className="bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-blue-700 transition-colors duration-300 shadow-lg hover:shadow-xl">
-          View All Conferences
-        </button>
-      </motion.div> */}
       </div>
     )
   }
+
   return (
     <section className="py-6 bg-gradient-to-b from-gray-100 to-white overflow-hidden">
       {selectedConference ? 
