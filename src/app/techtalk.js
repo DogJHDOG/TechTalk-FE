@@ -10,19 +10,14 @@ const TechTalkCentral = () => {
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
       {/* <Header/> */}
-
       {/* Hero Section */}
       <Intro/>
-
       {/* Recent Conferences Section */}
       <Conferences/>
-
       {/* Featured Summaries Section */}
       <FeatureSummaries/>
-
       {/* Trending Topics */}
-      <Trending/>
-
+      <Trending/> 
       {/* Community Insights */}
       <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
