@@ -82,7 +82,10 @@ export default function DeveloperDebates() {
 
   return (
     <section className="bg-gray-100 rounded-xl">
-      <div className="text-4xl font-bold mb-8 text-left bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">Hot Dev Debates 🔥</div>
+      <div className='flex flex-row items-center mb-8'>
+        <div className="text-3xl font-bold text-left bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-red-700">Hot Dev Debates</div>
+        <p className="text-3xl">🔥</p>
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
         {debates.map((debate, index) => (
           <DebateCard key={index} {...debate} />
