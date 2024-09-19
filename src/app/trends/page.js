@@ -203,25 +203,27 @@ const TrendAnalysisPage = () => {
   ];
 
   return (
-    <div className="max-w-6xl mx-auto flex flex-col gap-8 min-h-screen">
-      <div className='flex flex-rows gap-4'>
+    <div className="md:mx-10 flex flex-col gap-8 min-h-screen">
+      <div className='flex flex-col md:flex-row gap-4'>
         {/* 1. Hero Section */}
-        <section className="relative h-96 w-1/2 bg-gradient-to-r from-blue-500 to-purple-600 text-white max-w-7xl">
+        <section className="relative h-96 w-full md:w-1/2 bg-gradient-to-r from-blue-500 to-purple-600 text-white max-w-7xl">
           <div className="absolute inset-0 overflow-hidden">
-            <img src="/api/placeholder/1200/800" alt="Trend background" className="object-cover w-full h-full opacity-30" />
+            <img src="ai-image.jpeg" alt="Trend background" className="object-cover w-full h-full opacity-30" />
           </div>
-          <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 text-left">
-            <h1 className="text-5xl font-bold mb-4">{trendData.title}</h1>
+          <div className="relative z-10 flex flex-col items-left justify-center h-full px-4 text-left">
+            <p className="text-5xl font-bold mb-4">{trendData.title}</p>
             <p className="text-xl mb-8">{trendData.summary}</p>
             {/* <Button size="lg">Learn More</Button> */}
           </div>
         </section>
         {/* 2. Trend Overview & Stats */}
-        <section className="w-1/2 h-96 px-4 bg-gray-100">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8">Trend Overview</h2>
-            <p className="text-lg mb-8">{trendData.overview}</p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <section className="w-full md:w-1/2 h-96 px-4 bg-gray-100">
+          <div className="h-96 mx-auto">
+            <div className='max-h-2/3'>
+              <h2 className="text-3xl font-bold mb-8">Trend Overview</h2>
+              <p className="text-lg">{trendData.overview}</p>
+            </div>
+            <div className="max-h-1/3 grid grid-cols-1 md:grid-cols-3 gap-8">
               {trendData.stats.map((stat, index) => (
                 <Card key={index}>
                   <CardHeader>{stat.title}</CardHeader>
@@ -235,6 +237,7 @@ const TrendAnalysisPage = () => {
           </div>
         </section>
       </div>
+
 
       {/* 3. Deep Dive Section */}
       <Curtations/>
