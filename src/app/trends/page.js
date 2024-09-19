@@ -265,8 +265,8 @@ const TrendAnalysisPage = () => {
       </section>
 
       {/* 6. Personalized Recommendations */}
-      <section className="py-16 px-4 bg-gray-100">
-        <div className="max-w-6xl mx-auto">
+      <section className="p-8 bg-gray-100">
+        <div className="max-w-full mx-auto">
           <h2 className="text-3xl font-bold mb-8">Personalized Recommendations</h2>
           {/* Personalized content would be dynamically generated based on user data */}
           <p className="text-lg mb-8">Based on your interests, we recommend exploring these related trends:</p>
@@ -280,35 +280,6 @@ const TrendAnalysisPage = () => {
           </div>
         </div>
       </section>
-
-      {/* 7. Footer Section */}
-      <footer className="bg-gray-800 text-white py-12 px-4">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <h3 className="text-xl font-bold mb-4">Site Map</h3>
-            <ul>
-              <li><a href="#" className="hover:text-gray-300">Home</a></li>
-              <li><a href="#" className="hover:text-gray-300">Trends</a></li>
-              <li><a href="#" className="hover:text-gray-300">Conferences</a></li>
-              <li><a href="#" className="hover:text-gray-300">About Us</a></li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-xl font-bold mb-4">Newsletter</h3>
-            <p className="mb-4">Stay updated with the latest trends</p>
-            <div className="flex">
-              <input type="email" placeholder="Your email" className="flex-grow p-2 rounded-l-lg" />
-              <Button className="rounded-l-none">Subscribe</Button>
-            </div>
-          </div>
-          <div>
-            <h3 className="text-xl font-bold mb-4">Follow Us</h3>
-            <div className="flex space-x-4">
-              {/* Add social media icons here */}
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 };
