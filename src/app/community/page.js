@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, ThumbsUp, MessageSquare, Share2, Clock, Users } from 'lucide-react';
+import ImageCarousel from '../components/imageCarousel';
 
 const TechTalksMainPage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -26,25 +27,20 @@ const TechTalksMainPage = () => {
 
   return (
     <div className="flex bg-gray-100 min-h-screen">
-      <div className="flex-grow p-8">
-        <div className="max-w-6xl mx-auto">
-          {/* Header */}
-          <header className="text-center mb-12">
-            <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Tech Talks</h1>
-            <p className="text-gray-600 mt-2 text-xl">Engage in cutting-edge tech discussions</p>
-          </header>
-
+      <div className="flex-grow">
+        <ImageCarousel/>
+        <div className="-mt-64 max-w-6xl mx-auto p-8">
           {/* Hot Topics Section */}
-          <section className="mb-16">
+          <section className="relative mb-16 p-8 rounded-xl bg-white z-20">
             <h2 className="text-3xl font-bold mb-6 text-gray-800">Hot Topics</h2>
             <div className="relative">
-              <button onClick={prevSlide} className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg z-10 transition duration-300 hover:bg-gray-100">
+              {/* <button onClick={prevSlide} className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg z-10 transition duration-300 hover:bg-gray-100">
                 <ChevronLeft className="w-6 h-6 text-gray-600" />
-              </button>
+              </button> */}
               <div className="overflow-hidden rounded-xl shadow-2xl">
-                <div className="flex transition-transform duration-300 ease-in-out" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+                <div className="flex transition-transform duration-300 ease-in-out" style={{ transform: `translateX(-${currentSlide * 100}%)`, width: `${hotTopics.length * 100}%` }}>
                   {hotTopics.map((topic) => (
-                    <div key={topic.id} className="w-full flex-shrink-0 p-8 bg-gradient-to-br from-blue-500 to-purple-600 text-white">
+                    <div key={topic.id} className="w-full flex-shrink-0 p-8 bg-gradient-to-br from-blue-500 to-purple-600 text-white" style={{ width: `${100 / hotTopics.length}%` }}>
                       <h3 className="text-2xl font-bold mb-4">{topic.title}</h3>
                       <p className="mb-4 flex items-center"><Users className="w-5 h-5 mr-2" /> {topic.participants} participants</p>
                       <div className="w-full bg-white bg-opacity-30 rounded-full h-3 mb-2">
@@ -55,9 +51,9 @@ const TechTalksMainPage = () => {
                   ))}
                 </div>
               </div>
-              <button onClick={nextSlide} className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg z-10 transition duration-300 hover:bg-gray-100">
+              {/* <button onClick={nextSlide} className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg z-10 transition duration-300 hover:bg-gray-100">
                 <ChevronRight className="w-6 h-6 text-gray-600" />
-              </button>
+              </button> */}
             </div>
             <div className="flex flex-wrap justify-center mt-6">
               {['#AI', '#WebDev', '#React', '#Blockchain', '#Cloud'].map((tag) => (
