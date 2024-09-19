@@ -28,10 +28,10 @@ const TechTalksMainPage = () => {
   return (
     <div className="flex bg-gray-100 min-h-screen">
       <div className="flex-grow">
-        <ImageCarousel/>
-        <div className="-mt-64 max-w-6xl mx-auto p-8">
+        <div className="mb-32 mx-auto">
           {/* Hot Topics Section */}
-          <section className="relative mb-16 p-8 rounded-xl bg-white z-20">
+          <ImageCarousel/>
+          <section className="relative -mt-32 mb-16 m-4 p-8 rounded-xl bg-white z-20">
             <h2 className="text-3xl font-bold mb-6 text-gray-800">Hot Topics</h2>
             <div className="relative">
               {/* <button onClick={prevSlide} className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg z-10 transition duration-300 hover:bg-gray-100">
@@ -65,7 +65,7 @@ const TechTalksMainPage = () => {
           </section>
 
           {/* Live Discussions Section */}
-          <section className="mb-16">
+          <section className="mb-16 m-4">
             <h2 className="text-3xl font-bold mb-6 text-gray-800">Live Discussions</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[1, 2, 3].map((i) => (
@@ -80,7 +80,7 @@ const TechTalksMainPage = () => {
           </section>
 
           {/* Discussion Detail Section */}
-          <section className="mb-16">
+          <section className="mb-16 m-4">
             <h2 className="text-3xl font-bold mb-6 text-gray-800">Discussion: The Future of JavaScript</h2>
             <div className="bg-white rounded-xl shadow-lg p-8">
               <div className="flex justify-between items-center mb-6">
@@ -133,7 +133,7 @@ const TechTalksMainPage = () => {
           </section>
 
           {/* Event Banner */}
-          <section className="mb-16">
+          <section className="mb-16 m-4">
             <div className="bg-gradient-to-r from-purple-500 to-indigo-600 text-white p-8 rounded-xl shadow-lg">
               <h2 className="text-3xl font-bold mb-4">Live Event: Tech Talks Conference 2023</h2>
               <p className="mb-6 text-lg">Join us for three days of cutting-edge tech discussions and networking!</p>
@@ -144,14 +144,14 @@ const TechTalksMainPage = () => {
           </section>
 
           {/* Archive Section */}
-          <section>
+          <section className='m-4'>
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-3xl font-bold text-gray-800">Discussion Archive</h2>
               <button className="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition duration-300">
                 View All
               </button>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="m-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[1, 2, 3].map((i) => (
                 <div key={i} className="bg-white rounded-xl shadow-lg p-6 transition duration-300 hover:shadow-xl">
                   <h3 className="text-xl font-bold mb-3 text-gray-800">The Impact of AI on Software Testing</h3>
